@@ -1,0 +1,21 @@
+
+$ source .venv/bin/activate #virtual-environment
+
+$ python --version
+Python 3.5.2
+
+$ python
+
+>>> import nltk
+>>> from nltk import word_tokenize
+
+>>> nltk.download('punkt')
+>>> nltk.download('averaged_perceptron_tagger')
+
+>>> text = word_tokenize("This is my own invention")
+>>> nltk.pos_tag(text)
+[('This', 'DT'), ('is', 'VBZ'), ('my', 'PRP$'), ('own', 'JJ'), ('invention', 'NN')]
+
+>>> exit()
+
+$ deactivate #virtual-environment
