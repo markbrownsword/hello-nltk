@@ -1,30 +1,46 @@
-## Example Setup NLTK using virtual environment and pip
+## Example Python CLI App for NLTK (using Anaconda)
 
-## Prerequisites - python3 (with venv)
-sudo apt install python3-venv
+### Prerequisites
+[Install Anaconda](https://conda.io/docs/installation.html)  
 
-## Create the project folder
-mkdir Hello-NLTK  
-cd Hello-NLTK
-
-## Create Python3 virtual environment
-python3 -m venv .venv
-
-## To install from github
+### Install source from Github
+mkdir HelloNLTK  
+cd HelloNLTK  
 git clone <https://github.com/markbrownsword/hello-nltk.git> .  
-pip install -r requirements.txt
 
-## To install from scratch
-pip install -U nltk  
-pip freeze > requirements.txt
+### Create Python 3.5 environment (with NLTK)
 
-## Activate environment
-source .venv/bin/activate
+```bash
+conda create --name python35 python=3.5
+conda install nltk
 
-## Deactivate environment
-deactivate
+```
 
-## References
-<https://cloud.google.com/python/setup>  
-<https://docs.python.org/3/tutorial/venv.html>  
-<https://stackoverflow.com/questions/39406177/managing-contents-of-requirements-txt-for-a-python-virtual-environment>  
+### Activate environment
+
+```bash
+source activate python35
+```
+
+### Install and run the Application
+
+```bash
+./install.sh
+helloNLTK
+```
+
+### Deactivate environment
+
+```bash
+source deactivate
+```
+
+### PyCharm - Open Project
+Set 'python35' as project interpreter  
+
+### PyCharm - Create Run Configuration
+Select Run / Edit Configurations  
+Add Python configuration  
+Change 'Script path' to 'Module name: helloNLTK'    
+Set Python Interpreter to 'python35'  
+Set Working Directory to '/path/to/HelloNLTK/helloNLTK'
