@@ -1,6 +1,6 @@
 import sys
-from .classmodule import MyClass
-from .funcmodule import my_function
+from puncpy.classmodule import MyClass
+from puncpy.funcmodule import my_function
 
 
 def main():
