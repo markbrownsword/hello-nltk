@@ -1,5 +1,5 @@
 import unittest
-from helloNLTK.classmodule import MyClass
+from puncpy.classmodule import MyClass
 
 
 class MyClassModuleTestCase(unittest.TestCase):
