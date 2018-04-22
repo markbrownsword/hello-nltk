@@ -1,46 +1,42 @@
-## Example Python CLI App for NLTK (using Anaconda)
+## Example Python CLI App for NLTK (using Miniconda)
 
 ### Prerequisites
-[Install Anaconda](https://conda.io/docs/installation.html)  
+[Install Miniconda](https://conda.io/miniconda.html)  
 
-### Install source from Github
+### Setup
+```bash
+# Install source from Github
 mkdir HelloNLTK  
 cd HelloNLTK  
 git clone <https://github.com/markbrownsword/hello-nltk.git> .  
 
-### Create Python 3.5 environment (with NLTK)
-
-```bash
+# Create Python 3.5 environment (with NLTK)
 conda create --name python35 python=3.5
 conda install nltk
 
+# Or create environment from requirements.txt
+conda create --name python35 --file requirements.txt
+
 ```
 
-### Activate environment
+### Dev and Test
 
 ```bash
-source activate python35
-```
+# Activate environment
+conda activate python35
 
-### Install and run the Application
-
-```bash
+# Install (required one time only with pip option --editable used)
 ./install.sh
+
+# Run
 helloNLTK
+
+# Test
+python -m unittest discover -v
+
+# Create Requirements File
+conda list --export > requirements.txt 
+
+# Deactivate environment
+conda deactivate
 ```
-
-### Deactivate environment
-
-```bash
-source deactivate
-```
-
-### PyCharm - Open Project
-Set 'python35' as project interpreter  
-
-### PyCharm - Create Run Configuration
-Select Run / Edit Configurations  
-Add Python configuration  
-Change 'Script path' to 'Module name: helloNLTK'    
-Set Python Interpreter to 'python35'  
-Set Working Directory to '/path/to/HelloNLTK/helloNLTK'
