@@ -1,8 +1,11 @@
 
-$ source .venv/bin/activate #virtual-environment
+Learn about NLTK word_tokenize in the NLTK Book, Chapter 3.
+http://www.nltk.org/book/
+
+$ conda activate python35 #virtual-environment
 
 $ python --version
-Python 3.5.2
+Python 3.5.5 :: Anaconda, Inc.
 
 $ python
 
@@ -18,4 +21,4 @@ $ python
 
 >>> exit()
 
-$ deactivate #virtual-environment
+$ conda deactivate #virtual-environment
