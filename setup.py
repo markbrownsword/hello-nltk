@@ -8,4 +8,5 @@ setup(
         'console_scripts': [
             'helloNLTK = helloNLTK.__main__:main'
         ]
-    })
+    },
+    install_requires=['nltk'])
