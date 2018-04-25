@@ -1,18 +1,18 @@
 import unittest.mock
-from puncpy.classmodule import MyClass
+from puncpy.tagger import Tagger
 
 
-class MyClassModuleTestCase(unittest.TestCase):
-    # Tests for `classmodule.py`
+class TaggerTestCase(unittest.TestCase):
+    # Tests for `tagger.py`
 
-    @unittest.mock.patch('puncpy.classmodule.word_tokenize', return_value=['This', 'is', 'my', 'own', 'invention'])
-    @unittest.mock.patch('puncpy.classmodule.pos_tag', return_value=[('This', 'DT'), ('is', 'VBZ'), ('my', 'PRP$'), ('own', 'JJ'), ('invention', 'NN')])
+    @unittest.mock.patch('puncpy.tagger.word_tokenize', return_value=['This', 'is', 'my', 'own', 'invention'])
+    @unittest.mock.patch('puncpy.tagger.pos_tag', return_value=[('This', 'DT'), ('is', 'VBZ'), ('my', 'PRP$'), ('own', 'JJ'), ('invention', 'NN')])
     def test_tag_text(self, pos_tag_mock, word_tokenize_mock):
         # Arrange
-        my_object = MyClass('This is my own invention')
+        tagger = Tagger('This is my own invention')
 
         # Act
-        result = my_object.tag_text()
+        result = tagger.tag_text()
 
         # Assert nltk.word_tokenize received correct input
         args, kwargs = word_tokenize_mock.call_args_list[0]
