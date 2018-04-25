@@ -10,11 +10,7 @@ mkdir HelloNLTK
 cd HelloNLTK  
 git clone <https://github.com/markbrownsword/hello-nltk.git> .  
 
-# Create Python 3.5 environment (with NLTK)
-conda create --name python35 python=3.5
-conda install nltk
-
-# Or create environment from requirements.txt
+# Create Python 3.5 environment (from requirements.txt)
 conda create --name python35 --file requirements.txt
 
 ```
