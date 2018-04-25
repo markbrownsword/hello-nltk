@@ -1,6 +1,6 @@
 import sys
 from puncpy.tagger import Tagger
-from puncpy.funcmodule import my_function
+from puncpy.common import process_tagged_text
 
 
 def main():
@@ -10,13 +10,10 @@ def main():
     for arg in args:
         print('passed argument :: {}'.format(arg))
 
-    my_function('hello world')
-
     tagger = Tagger('This is my own invention')
     result = tagger.tag_text()
 
-    for item in result:
-        print(item)
+    process_tagged_text(result)
 
 
 if __name__ == '__main__':
