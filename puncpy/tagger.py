@@ -2,7 +2,7 @@ from nltk import word_tokenize
 from nltk import pos_tag
 
 
-class MyClass():
+class Tagger():
     def __init__(self, text):
         self.text = text
 

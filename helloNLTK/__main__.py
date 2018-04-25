@@ -1,5 +1,5 @@
 import sys
-from puncpy.classmodule import MyClass
+from puncpy.tagger import Tagger
 from puncpy.funcmodule import my_function
 
 
@@ -12,8 +12,8 @@ def main():
 
     my_function('hello world')
 
-    my_object = MyClass('This is my own invention')
-    result = my_object.tag_text()
+    tagger = Tagger('This is my own invention')
+    result = tagger.tag_text()
 
     for item in result:
         print(item)
