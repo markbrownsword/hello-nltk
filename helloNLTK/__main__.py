@@ -12,8 +12,11 @@ def main():
 
     my_function('hello world')
 
-    my_object = MyClass('Mark')
-    my_object.say_name()
+    my_object = MyClass('This is my own invention')
+    result = my_object.tag_text()
+
+    for item in result:
+        print(item)
 
 
 if __name__ == '__main__':

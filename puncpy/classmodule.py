@@ -1,7 +1,11 @@
+from nltk import word_tokenize
+from nltk import pos_tag
+
+
 class MyClass():
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, text):
+        self.text = text
 
-    def say_name(self):
-        print('name is {}'.format(self.name))
-
+    def tag_text(self):
+        tokens = word_tokenize(self.text)
+        return pos_tag(tokens)
